@@ -72,7 +72,7 @@ public class Match3Visual : MonoBehaviour {
                 Match3.GemGrid gemGrid = gemGridPosition.GetGemGrid();
 
                 Vector3 position = grid.GetWorldPosition(x, y);
-                position = new Vector3(position.x, 12);
+                position = new Vector3(position.x, 20f);
 
                 // Visual Transform
                 Transform gemGridVisualTransform = Instantiate(pfGemGridVisual, position, Quaternion.identity);
@@ -96,7 +96,8 @@ public class Match3Visual : MonoBehaviour {
 
         SetBusyState(.5f, () => SetState(State.TryFindMatches));
 
-        Camera.main.orthographicSize = match3.GetLevelSO().width * .92f;
+        Camera.main.orthographicSize = Mathf.Max(8.5f, match3.GetLevelSO().width * .92f);
+
         backgroundTransform.position = new Vector3(
             cameraTransform.position.x,
             cameraTransform.position.y,
@@ -112,7 +113,7 @@ public class Match3Visual : MonoBehaviour {
 
     private void Match3_OnNewGemGridSpawned(object sender, Match3.OnNewGemGridSpawnedEventArgs e) {
         Vector3 position = e.gemGridPosition.GetWorldPosition();
-        position = new Vector3(position.x, 12);
+        position = new Vector3(position.x, 20f);
 
         Transform gemGridVisualTransform = Instantiate(pfGemGridVisual, position, Quaternion.identity);
         gemGridVisualTransform.Find("sprite").GetComponent<SpriteRenderer>().sprite = e.gemGrid.GetGem().sprite;

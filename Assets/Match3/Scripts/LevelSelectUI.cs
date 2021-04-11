@@ -9,6 +9,7 @@ public class LevelSelectUI : MonoBehaviour {
     [SerializeField] private Color levelLockedColor;
     [SerializeField] private Color starUnachievedColor;
     [SerializeField] private Color starAchievedColor;
+    [SerializeField] private bool unlockAll;
 
 
     private void Awake() {
@@ -17,7 +18,7 @@ public class LevelSelectUI : MonoBehaviour {
         foreach (Transform levelTransform in levelContainer) {
             LevelNumberSO levelNumberSO = levelTransform.GetComponent<LevelNumberSOHolder>().levelNumberSO;
 
-            if (LevelProgression.IsLevelUnlocked(levelNumberSO)) {
+            if (unlockAll || LevelProgression.IsLevelUnlocked(levelNumberSO)) {
                 // Level Unlocked
                 levelTransform.GetComponent<Button>().enabled = true;
 

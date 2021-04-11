@@ -232,7 +232,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e444f63a33f80874bb9ca686b7d16bbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelSO: {fileID: 11400000, guid: 5b79a7946768184409aef33f2ffc725a, type: 2}
+  levelSO: {fileID: 11400000, guid: 654573d43f46f4447bb20424869aacc7, type: 2}
   pfGemGridVisual: {fileID: 4475699381534582891, guid: 343952d9773918b4c86f551eb62ddd52,
     type: 3}
   pfGlassGridVisual: {fileID: 4475699381534582891, guid: 7cb8119271dcd3141a60682e49d36762,
@@ -450,7 +450,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 7
+  orthographic size: 12
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -729,7 +729,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1575375740}
   m_Layer: 0
-  m_Name: GameHandler
+  m_Name: Main
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

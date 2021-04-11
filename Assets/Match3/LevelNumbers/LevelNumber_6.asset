@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: LevelNumber_6
   m_EditorClassIdentifier: 
   levelNumber: 6
-  levelSO: {fileID: 11400000, guid: e67fa424312a8c84c8e537182a88c4aa, type: 2}
+  levelSO: {fileID: 11400000, guid: 0e756ccd45854d3418d6cbdc6061ddec, type: 2}
   stars1Goal: 0
   stars2Goal: 0
   stars3Goal: 0
