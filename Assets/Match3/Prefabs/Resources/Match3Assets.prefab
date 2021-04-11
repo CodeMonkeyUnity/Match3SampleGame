@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8909783310277303345
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8909783310277303347}
+  - component: {fileID: 8909783310277303344}
+  m_Layer: 0
+  m_Name: Match3Assets
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8909783310277303347
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8909783310277303345}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8909783310277303344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8909783310277303345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79ab548c2517c1a499fe0243ecece065, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelNumberSOList:
+  - {fileID: 11400000, guid: 2e55c022459519644b5adb83d0e99392, type: 2}
+  - {fileID: 11400000, guid: 611d26a8b00c84b4f840ff1c39c698bb, type: 2}
+  - {fileID: 11400000, guid: b4383e63891362b40ae31c6fd395df4d, type: 2}
+  - {fileID: 11400000, guid: da4070f793a5f1045b74fa0e04146e30, type: 2}
+  - {fileID: 11400000, guid: b1b046a23d041ed40b32d528838780e2, type: 2}
+  - {fileID: 11400000, guid: 5c8607696d87af44fb87f9128279a52e, type: 2}
+  level_A: {fileID: 11400000, guid: 963260312c2a98240abf213d6d74782e, type: 2}
+  level_B: {fileID: 11400000, guid: ee05dfeb57dc43a45820125a5d78f952, type: 2}
+  level_C: {fileID: 11400000, guid: 33d420a52c493d94192f7f8e5d05dd30, type: 2}
+  level_D: {fileID: 11400000, guid: 44f0128a387ef4147823a88490a921a7, type: 2}
+  level_E: {fileID: 11400000, guid: 654573d43f46f4447bb20424869aacc7, type: 2}
