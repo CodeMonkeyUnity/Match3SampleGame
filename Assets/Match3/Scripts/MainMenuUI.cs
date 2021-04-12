@@ -13,4 +13,12 @@ public class MainMenuUI : MonoBehaviour {
         Application.Quit();
     }
 
+    public void TryClearAllSaveData() {
+        QuestionDialogUI.Instance.Show("Clear Save Data?", () => {
+            SaveSystem.ClearSaveData();
+        }, () => {
+            // Don't clear save data
+        });
+    }
+
 }

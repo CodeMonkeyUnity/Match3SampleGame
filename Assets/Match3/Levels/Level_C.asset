@@ -407,3 +407,5 @@ MonoBehaviour:
   goalType: 1
   moveAmount: 12
   targetScore: 5000
+  stars2Goal: 10
+  stars3Goal: 8

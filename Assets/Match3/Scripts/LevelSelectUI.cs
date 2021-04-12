@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class LevelSelectUI : MonoBehaviour {
+
+    private static bool unlockAllLevels;
 
     [SerializeField] private Color levelLockedColor;
     [SerializeField] private Color starUnachievedColor;
     [SerializeField] private Color starAchievedColor;
-    [SerializeField] private bool unlockAll;
 
 
     private void Awake() {
@@ -18,7 +20,7 @@ public class LevelSelectUI : MonoBehaviour {
         foreach (Transform levelTransform in levelContainer) {
             LevelNumberSO levelNumberSO = levelTransform.GetComponent<LevelNumberSOHolder>().levelNumberSO;
 
-            if (unlockAll || LevelProgression.IsLevelUnlocked(levelNumberSO)) {
+            if (unlockAllLevels || LevelProgression.IsLevelUnlocked(levelNumberSO)) {
                 // Level Unlocked
                 levelTransform.GetComponent<Button>().enabled = true;
 
@@ -61,10 +63,17 @@ public class LevelSelectUI : MonoBehaviour {
                 levelTransform.Find("Star_3").gameObject.SetActive(false);
             }
         }
+
+        transform.Find("LockUnlockAllBtn").Find("Text").GetComponent<TextMeshProUGUI>().text = (unlockAllLevels ? "LOCK" : "UNLOCK") + " ALL LEVELS";
     }
 
     public void LoadLevel(LevelNumberSO levelNumberSO) {
         Match3.LoadLevel(levelNumberSO);
+    }
+
+    public void UnlockAllLevels() {
+        unlockAllLevels = !unlockAllLevels;
+        SceneManager.LoadScene("LevelSelect");
     }
 
 }

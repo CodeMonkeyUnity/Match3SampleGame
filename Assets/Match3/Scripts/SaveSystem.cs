@@ -8,6 +8,15 @@ public static class SaveSystem {
         Load();
     }
 
+    public static void ClearSaveData() {
+        PlayerPrefs.DeleteAll();
+        PlayerPrefs.Save();
+
+        LevelProgression.Init();
+        Save();
+        Load();
+    }
+
     public static void Save() {
         SaveData saveData = new SaveData {
             levelProgressionSave = LevelProgression.Save()

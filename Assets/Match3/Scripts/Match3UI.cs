@@ -40,6 +40,31 @@ public class Match3UI : MonoBehaviour {
 
         LevelProgression.LevelStars levelStars = LevelProgression.LevelStars._1;
 
+        LevelNumberSO levelNumberSO = match3.GetLevelNumberSO();
+        LevelSO levelSO = match3.GetLevelSO();
+
+        Debug.Log("GetUsedMoveCount:  " + match3.GetUsedMoveCount());
+        switch (levelSO.goalType) {
+            case LevelSO.GoalType.Score:
+                if (match3.GetUsedMoveCount() <= levelSO.stars3Goal) {
+                    levelStars = LevelProgression.LevelStars._3;
+                } else {
+                    if (match3.GetUsedMoveCount() <= levelSO.stars2Goal) {
+                        levelStars = LevelProgression.LevelStars._2;
+                    }
+                }
+                break;
+            case LevelSO.GoalType.Glass:
+                if (match3.GetUsedMoveCount() <= levelSO.stars3Goal) {
+                    levelStars = LevelProgression.LevelStars._3;
+                } else {
+                    if (match3.GetUsedMoveCount() <= levelSO.stars2Goal) {
+                        levelStars = LevelProgression.LevelStars._2;
+                    }
+                }
+                break;
+        }
+
         winLoseTransform.Find("Star_1").GetComponent<Image>().color = starUnachievedColor;
         winLoseTransform.Find("Star_2").GetComponent<Image>().color = starUnachievedColor;
         winLoseTransform.Find("Star_3").GetComponent<Image>().color = starUnachievedColor;
